@@ -14,12 +14,10 @@ import GridPropsDisplay from './props-view/GridPropsDisplay.vue'
 
 const gridProps = ref<GenerateGridProps | null>(null)
 
-const generateProps = () => {
+const generateProps = (screenWidth: number, screenHeight: number) => {
   // Example values - you might want to make these configurable
   const nrOfNodes = 5
   const nrOfEdges = 3
-  const screenWidth = 800
-  const screenHeight = 600
 
   gridProps.value = generateGridProps(nrOfNodes, nrOfEdges, screenWidth, screenHeight)
 }
