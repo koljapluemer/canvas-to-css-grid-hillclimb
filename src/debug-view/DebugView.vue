@@ -10,7 +10,7 @@ import { ref } from 'vue'
 import { generateGridProps } from '@/grid-generation/generateGridProps'
 import type { GenerateGridProps } from '@/grid-generation/generateGridProps'
 import TopBar from './top-bar/TopBar.vue'
-import GridPropsDisplay from './GridPropsDisplay.vue'
+import GridPropsDisplay from './props-view/GridPropsDisplay.vue'
 
 const gridProps = ref<GenerateGridProps | null>(null)
 
