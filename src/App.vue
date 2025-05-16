@@ -1,4 +1,9 @@
+<script setup lang="ts">
+import DebugView from './debug-view/DebugView.vue';
+
+</script>
+
 
 <template>
-<div class="font-bold">Cool.</div>
+<DebugView />
 </template>

@@ -10,7 +10,7 @@ import { generateParameterEdgePlacementPrios } from "./utils/generateParameterEd
 import { generateParameterEdgeStartCardinalPreferences } from "./utils/generateParameterEdgeStartCardinalPreferences";
 import { generateParameterEdgeEndCardinalPreferences } from "./utils/generateParameterEdgeEndCardinalPreferences";
 
-type GenerateGridProps = {
+export type GenerateGridProps = {
     cellSize: ParameterCellSize;
     nodePlacementPrios: ParameterNodePlacementPrios;
     nodeGaps: ParameterNodeGaps;
