@@ -55,9 +55,9 @@
 </template>
 
 <script setup lang="ts">
-import type { GenerateGridProps } from '@/grid-generation/generateGridProps'
+import type { GridGenerationProps } from '@/grid-generation/generateGridProps'
 
 const props = defineProps<{
-  gridProps: GenerateGridProps | null
+  gridProps: GridGenerationProps | null
 }>()
 </script> 

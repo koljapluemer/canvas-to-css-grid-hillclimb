@@ -1,7 +1,6 @@
 // pulls all the parameters from the utils
 // then uses them to generate a grid
 
-import type { ParameterCellSize, ParameterNodePlacementPrios, ParameterNodeGaps, ParameterNodeSize, ParameterEdgePlacementPrios, ParameterEdgeEndCardinalPreference, ParameterEdgeStartCardinalPreference } from "@/types";
 import { generateParameterCellSize } from "./utils/generateParameterCellSize";
 import { generateParameterNodePlacementPrios } from "./utils/generateParameterNodePlacementPrios";
 import { generateParameterNodeGaps } from "./utils/generateParameterNodeGaps";
@@ -9,18 +8,11 @@ import { generateParameterNodeSize } from "./utils/generateParameterNodeSize";
 import { generateParameterEdgePlacementPrios } from "./utils/generateParameterEdgePlacementPrios";
 import { generateParameterEdgeStartCardinalPreferences } from "./utils/generateParameterEdgeStartCardinalPreferences";
 import { generateParameterEdgeEndCardinalPreferences } from "./utils/generateParameterEdgeEndCardinalPreferences";
+import type { GridGenerationProps } from "./types";
 
-export type GenerateGridProps = {
-    cellSize: ParameterCellSize;
-    nodePlacementPrios: ParameterNodePlacementPrios;
-    nodeGaps: ParameterNodeGaps;
-    nodeSize: ParameterNodeSize[];
-    edgePlacementPrios: ParameterEdgePlacementPrios;
-    edgeStartCardinalPreferences: ParameterEdgeStartCardinalPreference;
-    edgeEndCardinalPreferences: ParameterEdgeEndCardinalPreference;
-}
 
-export function generateGridProps(nrOfNodes: number, nrOfEdges: number, screenWidth: number, screenHeight: number): GenerateGridProps {
+
+export function generateGridProps(nrOfNodes: number, nrOfEdges: number, screenWidth: number, screenHeight: number): GridGenerationProps {
     return {
         cellSize: generateParameterCellSize(screenWidth, screenHeight, nrOfNodes, nrOfEdges),
         nodePlacementPrios: generateParameterNodePlacementPrios(nrOfNodes),
@@ -32,3 +24,4 @@ export function generateGridProps(nrOfNodes: number, nrOfEdges: number, screenWi
     }
 }
 
+export type { GridGenerationProps };

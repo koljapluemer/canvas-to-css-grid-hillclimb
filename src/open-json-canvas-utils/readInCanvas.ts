@@ -1,7 +1,7 @@
 // Types for Open JSON Canvas spec 1.0
 type CanvasColor = string; // Can be hex color or preset color (1-6)
 
-interface BaseNode {
+export interface BaseNode {
   id: string;
   type: 'text' | 'file' | 'link' | 'group';
   x: number;
@@ -11,30 +11,30 @@ interface BaseNode {
   color?: CanvasColor;
 }
 
-interface TextNode extends BaseNode {
+export interface TextNode extends BaseNode {
   type: 'text';
   text: string;
 }
 
-interface FileNode extends BaseNode {
+export interface FileNode extends BaseNode {
   type: 'file';
   file: string;
   subpath?: string;
 }
 
-interface LinkNode extends BaseNode {
+export interface LinkNode extends BaseNode {
   type: 'link';
   url: string;
 }
 
-interface GroupNode extends BaseNode {
+export interface GroupNode extends BaseNode {
   type: 'group';
   label?: string;
   background?: string;
   backgroundStyle?: 'cover' | 'ratio' | 'repeat';
 }
 
-type Node = TextNode | FileNode | LinkNode | GroupNode;
+export type Node = TextNode | FileNode | LinkNode | GroupNode;
 
 interface Edge {
   id: string;
